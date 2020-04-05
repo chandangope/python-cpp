@@ -31,7 +31,7 @@ def testPrime_py(testList):
 if __name__ == "__main__":
 	testList = [17, 8191, 131071, 100000, 524287, 524289, 6700417, 6700419, 2147483647]
 
-	print("Test list: {}".format(testList))
+	print("Test list: {}\n".format(testList))
 	num_iters = 100
 
 	c_time = 0
@@ -42,7 +42,7 @@ if __name__ == "__main__":
 		c_time += end-start
 	c_time /= num_iters
 	print("Prime numbers returned by C:\n{}".format(res))
-	print("Time taken by C: {} msecs".format(1000*c_time))
+	print("Time taken by C: {} msecs\n".format(1000*c_time))
 
 	py_time = 0
 	for i in range(1, num_iters+1):
@@ -52,7 +52,7 @@ if __name__ == "__main__":
 		py_time += end-start
 	py_time /= num_iters
 	print("Prime numbers returned by Python:\n{}".format(res))
-	print("Time taken by Python: {} msecs".format(1000*py_time))
-	print("------------------------------------------------------------------")
+	print("Time taken by Python: {} msecs\n".format(1000*py_time))
+	print("--------------------------------------------------------")
 	print("C code is {} times faster than Python".format(py_time/c_time))
-	print("------------------------------------------------------------------")
+	print("--------------------------------------------------------")
